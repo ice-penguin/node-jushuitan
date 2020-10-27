@@ -1,0 +1,29 @@
+{
+  "name": "node-jushuitan",
+  "version": "1.0.0",
+  "description": "jushuitan tool of node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ice-penguin/node-jushuitan.git"
+  },
+  "keywords": [
+    "jushuitan",
+    "node"
+  ],
+  "author": "hjpenguin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ice-penguin/node-jushuitan/issues"
+  },
+  "url": "https://open.jushuitan.com/document/8.html",
+  "homepage": "https://github.com/ice-penguin/node-jushuitan#readme",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "lodash": "^4.17.20",
+    "request": "^2.88.2"
+  }
+}

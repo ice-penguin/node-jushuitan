@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# 忽略测试文件
+test/test.js

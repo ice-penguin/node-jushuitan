@@ -1,26 +1,13 @@
-## Install 安装
 
-> use nom install
->
-> 使用npm安装
 
-```
-npm install node-jushuitan
-```
+//测试参数
+let partnerid = "ywv5jGT8ge6Pvlq3FZSPol345asd";
+let partnerkey = "ywv5jGT8ge6Pvlq3FZSPol2323";
+let token = "181ee8952a88f5a57db52587472c3798";
+let url = "https://c.jushuitan.com/api/open/query.aspx";
+let shop_id = 111111;
 
-> [download](https://github.com/ice-penguin/node-jushuitan) from github
->
-> 从github[下载](https://github.com/ice-penguin/node-jushuitan)
 
-## Introduce 模块说明 
-
-> 该模块支持聚水潭部分接口，请求结果返回promise对象。参数主要根据接口说明，可以参照[聚水潭文档](https://open.jushuitan.com/document/2037.html)
-
-## Sample example  使用说明
-
-### init Client 初始化客户端
-
-```
 /**
  * 初始化客户端
  * @param {object} params 初始化参数
@@ -35,22 +22,19 @@ let client = require("../index").initClient({
 	token:token,
 	url:url
 })
-```
 
-### token刷新
+// console.log(client);
 
-```
+// token刷新
 let refresh = ()=>{
 	client.refresh()
 	.then(function(body){
 		console.log(body);
 	})
 }
-```
 
-### 普通商品上传
+// refresh();
 
-```
 /**
  * 普通商品上传
  * @param    {[Number]}                 shop_id [店铺编号]
@@ -74,11 +58,9 @@ let productUpload = ()=>{
 		console.log(body);
 	})
 }
-```
 
-### 盘点单上传
+// productUpload();
 
-```
 /**
  * 盘点单上传
  * @param    {[String]}                 warehouse [仓库;主仓=1，销退仓=2， 进货仓=3，次品仓 = 4]
@@ -96,11 +78,9 @@ let quantityUpdate = ()=>{
 		console.log(body);
 	})
 }
-```
 
-### 订单上传
+// quantityUpdate();
 
-```
 /**
  * 订单上传
  * @param    {[Number]}                 shop_id [店铺编号]
@@ -181,11 +161,9 @@ let orderUpload = ()=>{
 		console.log(body);
 	})
 }
-```
 
-### 订单取消
+// orderUpload();
 
-```
 /**
  * 订单取消
  * @param    {[Number]}                 shop_id [店铺编号]
@@ -197,11 +175,9 @@ let orderCancel = ()=>{
 		console.log(body);
 	})
 }
-```
 
-### 订单查询
+// orderCancel();
 
-```
 /**
  * 订单查询
  * @param    {[String]}                 shop_id [店铺编号,可不传]
@@ -213,5 +189,5 @@ let orderQuery = ()=>{
 		console.log(body);
 	})
 }
-```
 
+// orderQuery();
