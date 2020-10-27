@@ -189,7 +189,7 @@ let orderUpload = ()=>{
 /**
  * 订单取消
  * @param    {[Number]}                 shop_id [店铺编号]
- * @param    {[Array]}                 ids [聚水潭线上订单号 长度<=50]
+ * @param    {[Array]}                 ids [聚水潭线上订单号 长度<=50，即同步过去的系统单号]
  */
 let orderCancel = ()=>{
 	client.orderCancel(shop_id,["114","115"])
@@ -205,7 +205,7 @@ let orderCancel = ()=>{
 /**
  * 订单查询
  * @param    {[String]}                 shop_id [店铺编号,可不传]
- * @param    {[String]}                 id [聚水潭线上订单号 长度<=50]
+ * @param    {[String]}                 id [聚水潭线上订单号, 长度<=50，即同步过去的系统单号]
  */
 let orderQuery = ()=>{
 	client.orderQuery(shop_id,["114","115"])
