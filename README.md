@@ -29,7 +29,7 @@ npm install node-jushuitan
  * @param {String} token 授权码
  * @param {String} url 请求地址，不填默认为正式地址
  */
-let client = require("../index").initClient({
+let client = require("node-jushuitan").initClient({
 	partnerid:partnerid,
 	partnerkey:partnerkey,
 	token:token,
