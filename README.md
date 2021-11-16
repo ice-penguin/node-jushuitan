@@ -214,4 +214,33 @@ let orderQuery = ()=>{
 	})
 }
 ```
+### 订单同步发货
 
+```
+/**
+ * 订单发货同步
+ * @param    {[String]}                 shop_id [店铺编号,可不传]
+ * @param    {[Object]}                 obj [请求参数对象]
+ * 
+ * obj参数
+ * @param    {[int]}                    o_id [聚水潭内部单号]
+ * @param    {[String]}                 so_id [聚水潭线上订单号 长度<=50]
+ * @param    {[String]}                 lc_name [快递公司]
+ * @param    {[String]}                 l_id [快递单号]
+ * @param    {[String]}                 lc_id [快递编码，【物流(快递)公司及打印模板】中的物流公司编号]
+ */
+let orderSend = ()=>{
+	client.orderSend(shop_id,{
+		o_id:3783537,
+		so_id:"S_A211116103211305884",
+		lc_name:"韵达快递",
+		l_id:"1253",
+		lc_id:"YUNDA",
+	})
+	.then(function(body){
+		console.log(body);
+	})
+}
+
+// orderSend();
+```
